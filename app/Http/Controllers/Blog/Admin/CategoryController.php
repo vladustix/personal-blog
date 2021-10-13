@@ -2,17 +2,15 @@
 
 namespace App\Http\Controllers\Blog\Admin;
 
+use Illuminate\Support\Str;
 use App\Models\BlogCategory;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\BlogCategoryUpdateRequest;
 use App\Http\Requests\BlogCategoryCreateRequest;
-use Illuminate\Support\Str;
 use App\Repositories\BlogCategoryRepository;
 
 /**
  * Управление категориями блога
- * 
+ *
  * @package App\Http\Controllers\Blog\Admin
  */
 class CategoryController extends BaseController
@@ -68,14 +66,14 @@ class CategoryController extends BaseController
         if (empty($data['slug'])) {
             $data['slug'] = Str::slug($data['title']);
         }
-        
+
         // Создаст объект, но не добавит в БД
         // $item = new BlogCategory($data);
         // $item->save();
 
         // Создаст объект и добавит в БД
         $item = (new BlogCategory())->create($data);
-        
+
         if ($item) {
             return redirect()
                 ->route('blog.admin.categories.edit', [$item->id])
@@ -115,7 +113,7 @@ class CategoryController extends BaseController
         if (empty($item)) {
             abort(404);
         }
-        
+
         $categoryList = $this->blogCategoryRepository->getForComboBox();
 
         return view('blog.admin.categories.edit', compact('item', 'categoryList'));
@@ -151,7 +149,7 @@ class CategoryController extends BaseController
 
         // $item = BlogCategory::find($id);
         $item = $this->blogCategoryRepository->getEdit($id);
-        
+
         if (empty($item)) {
             return back()
                 ->withErrors(['msg' => "Запись id=[{$id}] не найдена"])
