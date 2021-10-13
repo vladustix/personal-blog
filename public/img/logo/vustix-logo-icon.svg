@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="{{ asset('public/css/style.css') }}"?>
+<svg version="1.1"
+    baseProfile="full"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xml:space="preserve"
+    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+    viewBox="0 0 1000 1000"
+    height="1000px"
+    width="1000px">
+    <defs>
+        <style type="text/css">
+            <![CDATA[
+                .vustix-logo-icon-bg {
+                    stroke: black;
+                    stroke-width: 2;
+                    stroke-miterlimit: 22.9256;
+                }
+
+                .vustix-logo-icon-color-1 {
+                    fill: black;
+                }
+
+                .vustix-logo-icon-color-2 {
+                    fill: white;
+                }
+            ]]>
+        </style>
+    </defs>
+    <g id="vustix-logo-icon">
+        <metadata id="vustix-logo-icon-data"/>
+        <g id="vustix-logo-icon-group">
+            <rect class="vustix-logo-icon-color-1 vustix-logo-icon-bg" x="0.01" width="1000" height="1000"/>
+            <g>
+                <polygon class="vustix-logo-icon-color-2" points="445.31,620.13 445.31,342.5 490.19,342.5 490.18,747.5 87.5,252.5 146.24,252.5 "/>
+                <polygon class="vustix-logo-icon-color-2" points="839.29,342.5 898.04,342.5 769.91,500 912.5,675.28 912.5,747.5 740.54,536.1 641.78,657.5 583.03,657.5 711.16,500 509.82,252.5 568.56,252.5 740.54,463.89 "/>
+            </g>
+        </g>
+    </g>
+</svg>

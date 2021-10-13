@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Blog\PostController;
-use App\Http\Controllers\Blog\Admin\CategoryController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Blog\PostController as BlogPostController;
+use App\Http\Controllers\Blog\Admin\CategoryController as BlogAdminCategoryController;
+use App\Http\Controllers\Blog\Admin\PostController as BlogAdminPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +20,21 @@ use App\Http\Controllers\Blog\Admin\CategoryController;
 
 // Route::get('/welcome', [App\Http\Controllers\MainController::class, 'welcome'])->name('welcome');
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
-Route::resource('blog/posts', PostController::class)->names('blog.posts');
+Route::resource('blog/posts', BlogPostController::class)->names('blog.posts');
 
-Route::resource('admin/blog/categories', CategoryController::class)
+Route::prefix('admin/blog/')->group(function() {
+
+    // BlogCategory
+    Route::resource('categories', BlogAdminCategoryController::class)
     ->only(['index', 'edit', 'create', 'update', 'store'])
     ->names('blog.admin.categories');
+
+    // BlogPost
+    Route::resource('posts', BlogAdminPostController::class)
+    ->except(['show'])
+    ->names('blog.admin.posts');
+});

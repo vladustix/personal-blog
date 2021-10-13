@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="{{ asset('public/css/style.css') }}"?>
+<svg version="1.1"
+    baseProfile="full"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xml:space="preserve"
+    style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+    viewBox="0 0 1000 250"
+    height="250px"
+    width="1000px">
+    <defs>
+        <style type="text/css">
+            <![CDATA[
+                #vustix-logo-group {
+                    fill: white;
+                }
+            ]]>
+        </style>
+    </defs>
+    <g id="vustix-logo">
+        <metadata id="vustix-logo-data"/>
+        <g id="vustix-logo-group">
+            <path class="vustix-logo-color-1" d="M362.44 45.67l22.73 0 0 90.92c0,37.5 -30.68,68.17 -68.17,68.17 -37.49,0 -68.17,-30.67 -68.17,-68.17l0 -90.92 22.72 0 0 90.92c0,24.99 20.45,45.45 45.45,45.45 24.99,0 45.44,-20.46 45.44,-45.45l0 -90.92z"/>
+            <polygon class="vustix-logo-color-2" points="751.18,0 773.9,0 773.9,22.73 751.18,22.73 "/>
+            <path class="vustix-logo-color-3" d="M507.16 45.45c24.94,0 45.34,20.34 45.46,45.24l-22.72 0.22c0,-12.5 -10.23,-22.73 -22.73,-22.73l-45.46 0c-12.5,0 -22.73,10.23 -22.73,22.73 0,12.5 10.23,22.73 22.73,22.73l45.45 0c25.01,0 45.46,20.45 45.46,45.45 0,24.99 -20.45,45.46 -45.46,45.46l-45.44 0c-25.01,0 -45.46,-20.47 -45.46,-45.47l22.72 0.01c0,12.5 10.23,22.73 22.73,22.73l45.46 0c12.5,0 22.73,-10.23 22.73,-22.73 0,-12.5 -10.23,-22.73 -22.73,-22.73l-45.45 0c-25.01,0 -45.46,-20.46 -45.46,-45.45 0,-25 20.45,-45.46 45.46,-45.46l45.44 0z"/>
+            <polygon class="vustix-logo-color-4" points="720.08,45.45 720.08,68.18 663.26,68.18 663.26,204.76 640.53,204.76 640.53,68.18 583.71,68.18 583.71,45.45 "/>
+            <polygon class="vustix-logo-color-5" points="180.71,185.67 180.71,45.45 203.38,45.45 203.37,250 0,0 29.67,0 "/>
+            <polygon class="vustix-logo-color-6" points="963.03,45.46 992.7,45.46 927.98,125 1000,213.53 1000,250 913.15,143.24 863.27,204.55 833.6,204.55 898.31,125 796.62,0 826.29,0 913.15,106.77 "/>
+            <polygon class="vustix-logo-color-7" points="751.18,45.46 773.9,45.46 773.9,204.55 751.18,204.55 "/>
+        </g>
+    </g>
+</svg>
+

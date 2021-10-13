@@ -17,7 +17,7 @@
                     <div class="tab-pane active" id="#maindata" role="tabpanel">
                         <div class="form-group">
                             <label for="title">Заголовок</label>
-                            <input name="title" value="{{ $item->title }}" id="title" type="text" class="form-control" minlength="3" required>
+                            <input name="title" value="{{ old('title', $item->title ) }}" id="title" type="text" class="form-control" minlength="3" required>
                         </div>
                         <div class="form-group">
                             <label for="slug">Идентификатор</label>
@@ -28,7 +28,8 @@
                             <select name="parent_id" id="parent_id" class="form-control" placeholder="Выберите категорию" required>
                                 @foreach ($categoryList as $categoryOption)
                                     <option value="{{ $categoryOption->id }}" @if($categoryOption->id == $item->parent_id) selected @endif>
-                                        {{ $categoryOption->id }}. {{ $categoryOption->title }}
+                                        {{-- {{ $categoryOption->id }}. {{ $categoryOption->title }} --}}
+                                        {{ $categoryOption->id_title }}
                                     </option>
                                 @endforeach
                             </select>
